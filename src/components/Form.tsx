@@ -15,7 +15,10 @@ const Container = styled.div`
     background-attachment: fixed;
     background-size: cover;
     overflow-y: hidden;
-    
+    @media (max-width: 900px) {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
 `
 
 const Wrapper = styled.div`
