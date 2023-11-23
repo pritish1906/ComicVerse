@@ -15,6 +15,7 @@ const Container = styled.div`
     background-attachment: fixed;
     background-size: cover;
     overflow-y: hidden;
+    
 `
 
 const Wrapper = styled.div`
@@ -25,6 +26,12 @@ const Wrapper = styled.div`
     width: 90%;
     border: 0px solid ;
     border-radius: 5px;
+    @media (max-width: 900px) {
+        flex-direction: column; // Change to column layout when screen width is 900px or below
+        padding: 20px;
+        padding: 20px;
+        margin: 15px;
+    }
 `
 
 const Description = styled.div`
@@ -89,6 +96,9 @@ const Button = styled.button`
 
   border-radius: 30px;
   
+  @media (max-width: 900px) {
+    margin: 20px;
+}
 `
 
 
@@ -155,7 +165,6 @@ export const PostForm = () => {
 
 
     return (
-
         <Container>
             <Wrapper>
             <FormContainer>
@@ -168,11 +177,10 @@ export const PostForm = () => {
                         </Button>
                     </Form>
                 </FormContainer>
-
                 <Description>
                     <Image src={imageSrc}></Image>
                 </Description>
-                
+               
             </Wrapper>
         </Container>
     )
